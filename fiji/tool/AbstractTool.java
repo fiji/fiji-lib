@@ -1,4 +1,4 @@
-package fiji.util;
+package fiji.tool;
 
 import ij.IJ;
 import ij.ImageListener;
@@ -10,6 +10,9 @@ import ij.gui.Toolbar;
 
 import ij.plugin.PlugIn;
 
+import java.awt.Component;
+
+import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -31,6 +34,7 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 	protected SliceListener sliceListener;
 	protected List<SliceObserver> sliceObservers = new ArrayList<SliceObserver>();
 	protected ToolbarMouseAdapter toolbarMouseListener;
+	protected ToolToggleListener toolToggleListener;
 
 	/*
 	 * There is currently no way to let the tool know that the toolbar decided to clear the custom tools.
@@ -44,6 +48,11 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 	 * to "true" to allow this.
 	 */
 	protected boolean clearToolsIfNecessary;
+
+	/*
+	 * Remember what the current state of the tool is.
+	 */
+	protected boolean toolActive;
 
 	/*
 	 * PUBLIC METHODS
@@ -98,7 +107,12 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 			sliceListener = (SliceListener)this;
 		if (this instanceof ToolWithOptions)
 			toolbarMouseListener = new ToolbarMouseAdapter((ToolWithOptions)this);
+		if (this instanceof ToolToggleListener) {
+			toolToggleListener = (ToolToggleListener)this;
+			toolToggleListener.toolToggled(true);
+		}
 
+		toolActive = true;
 		registerTool();
 	}
 
@@ -215,7 +229,11 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 	}
 
 	public final boolean isThisTool() {
-		return Toolbar.getToolId() == toolID;
+		boolean active = Toolbar.getToolId() == toolID;
+		if (toolToggleListener != null && active != toolActive)
+			toolToggleListener.toolToggled(active);
+		toolActive = active;
+		return active;
 	}
 
 	/*
@@ -280,6 +298,10 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 	}
 
 	protected void unregisterTool() {
+		if (toolToggleListener != null && toolActive) {
+			toolToggleListener.toolToggled(false);
+			toolActive = false;
+		}
 		for (int id : WindowManager.getIDList())
 			unregisterTool(WindowManager.getImage(id));
 		ImagePlus.removeImageListener(this);
@@ -312,6 +334,38 @@ public abstract class AbstractTool implements ImageListener, PlugIn {
 			canvas.removeMouseMotionListener(mouseMotionProxy);
 		if (mouseWheelProxy != null)
 			canvas.removeMouseWheelListener(mouseWheelProxy);
+	}
+
+	/* convenience methods */
+
+	public ImagePlus getImagePlus(ComponentEvent e) {
+		ImageCanvas canvas = getImageCanvas(e);
+		return canvas == null ? null : canvas.getImage();
+	}
+
+	public ImageCanvas getImageCanvas(ComponentEvent e) {
+		Component component = e.getComponent();
+		return component instanceof ImageCanvas ? (ImageCanvas)component : null;
+	}
+
+	public int getOffscreenX(MouseEvent e) {
+		ImageCanvas canvas = getImageCanvas(e);
+		return canvas == null ? -1 : canvas.offScreenX(e.getX());
+	}
+
+	public int getOffscreenY(MouseEvent e) {
+		ImageCanvas canvas = getImageCanvas(e);
+		return canvas == null ? -1 : canvas.offScreenX(e.getY());
+	}
+
+	public double getOffscreenXDouble(MouseEvent e) {
+		ImageCanvas canvas = getImageCanvas(e);
+		return canvas == null ? -1 : canvas.offScreenXD(e.getX());
+	}
+
+	public double getOffscreenYDouble(MouseEvent e) {
+		ImageCanvas canvas = getImageCanvas(e);
+		return canvas == null ? -1 : canvas.offScreenXD(e.getY());
 	}
 
 	/*
