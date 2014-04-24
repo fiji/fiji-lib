@@ -3,6 +3,7 @@ package fiji;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assume.assumeTrue;
+import ij.plugin.PlugIn;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +31,24 @@ public class DebugTest {
 			assertNull(reader.readLine());
 		} finally {
 			reader.close();
+		}
+	}
+
+	@Test
+	public void runPlugInTest() throws Exception {
+		assertEquals("[Hello, world!]", Debug.runPlugIn(MyTest.class.getName(), "Hello, world!", true).toString());
+	}
+
+	public static class MyTest implements PlugIn {
+		private String value;
+
+		@Override
+		public void run(final String arg) {
+			value = arg;
+		}
+
+		public String toString() {
+			return "[" + value + "]";
 		}
 	}
 }
