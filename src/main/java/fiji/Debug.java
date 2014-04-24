@@ -74,4 +74,28 @@ public class Debug {
 			throw new RuntimeException(e);
 		}
 	}
+
+	/**
+	 * Debug helper
+	 *
+	 * Call this function from your debugger to debug your filter plugin
+	 *
+	 * @param className the name of the class implementing either {@link PlugIn} or {@link PlugInFilter}
+	 * @param arg the {@link String} argument passed to the plugin's {@code run} or {@code setup} method
+	 * @param headless whether to run in headless mode
+	 * @return the plugin instance (whose class was loaded in a different class loader than the current one!)
+	 */
+	public static Object runPlugIn(final String className, final String arg, final boolean headless) {
+		try {
+			System.setProperty("ij1.plugin.dirs", "/non-existing/");
+			final LegacyEnvironment ij1 = new LegacyEnvironment(null, headless);
+			ij1.addPluginClasspath(Thread.currentThread().getContextClassLoader());
+			// show UI
+			if (!headless) ij1.main();
+			return ij1.runPlugIn(className, arg);
+		}
+		catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }
