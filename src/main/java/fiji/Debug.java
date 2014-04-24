@@ -51,7 +51,8 @@ public class Debug {
 	 *
 	 * @param imagePath the path to the example image to test with
 	 * @param plugin the menu item label of the plugin to run
-	 * @param pass the parameters as recorded by the Recorder, or null if dialogs should pop up
+	 * @param parameters the parameters as recorded by the Recorder, or null if dialogs should pop up
+	 * @param headless whether to run in headless mode
 	 */
 	public static void runFilter(String imagePath, String plugin, String parameters, final boolean headless) {
 		try {
