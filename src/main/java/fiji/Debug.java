@@ -1,8 +1,8 @@
 package fiji;
 
 import fiji.debugging.Object_Inspector;
-import imagej.patcher.LegacyEnvironment;
-import imagej.patcher.LegacyInjector;
+import net.imagej.patcher.LegacyEnvironment;
+import net.imagej.patcher.LegacyInjector;
 
 import java.io.File;
 
