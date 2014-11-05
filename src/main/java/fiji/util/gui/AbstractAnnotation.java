@@ -1,5 +1,7 @@
 package fiji.util.gui;
 
+import fiji.util.gui.OverlayedImageCanvas.Overlay;
+
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -8,8 +10,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 import java.awt.geom.AffineTransform;
-
-import fiji.util.gui.OverlayedImageCanvas.Overlay;
 
 /**
  * Abstract class dedicated to draw overlayed annotations on a {@link OverlayedImageCanvas}.

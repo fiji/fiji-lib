@@ -1,7 +1,6 @@
 package fiji.statistics;
 
 import ij.gui.Roi;
-
 import ij.process.ByteProcessor;
 import ij.process.ColorProcessor;
 import ij.process.FloatProcessor;

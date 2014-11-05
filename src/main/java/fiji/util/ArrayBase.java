@@ -1,7 +1,6 @@
 package fiji.util;
 
 import java.lang.reflect.Array;
-
 import java.util.Iterator;
 
 public abstract class ArrayBase<ArrayType, BaseType>  implements Iterable<BaseType> {

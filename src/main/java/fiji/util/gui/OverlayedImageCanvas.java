@@ -1,15 +1,15 @@
 package fiji.util.gui;
 
+import ij.ImagePlus;
+import ij.gui.ImageCanvas;
+import ij.gui.Roi;
+
 import java.awt.Composite;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Collection;
-
-import ij.ImagePlus;
-import ij.gui.ImageCanvas;
-import ij.gui.Roi;
 
 /**
  * Extension of ImageCanvas to allow multiple overlays

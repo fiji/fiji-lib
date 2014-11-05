@@ -4,15 +4,12 @@ import ij.IJ;
 import ij.ImageListener;
 import ij.ImagePlus;
 import ij.WindowManager;
-
 import ij.gui.ImageWindow;
-
 import ij.process.ImageProcessor;
 
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Scrollbar;
-
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.awt.event.MouseWheelEvent;

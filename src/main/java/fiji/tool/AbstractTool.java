@@ -4,15 +4,12 @@ import ij.IJ;
 import ij.ImageListener;
 import ij.ImagePlus;
 import ij.WindowManager;
-
 import ij.gui.ImageCanvas;
 import ij.gui.ImageWindow;
 import ij.gui.Toolbar;
-
 import ij.plugin.PlugIn;
 
 import java.awt.Component;
-
 import java.awt.event.ComponentEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -24,7 +21,6 @@ import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

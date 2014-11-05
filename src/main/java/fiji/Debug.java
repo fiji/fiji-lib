@@ -1,10 +1,13 @@
 package fiji;
 
 import fiji.debugging.Object_Inspector;
-import net.imagej.patcher.LegacyEnvironment;
-import net.imagej.patcher.LegacyInjector;
+import ij.plugin.PlugIn;
+import ij.plugin.filter.PlugInFilter;
 
 import java.io.File;
+
+import net.imagej.patcher.LegacyEnvironment;
+import net.imagej.patcher.LegacyInjector;
 
 public class Debug {
 	static {

@@ -26,12 +26,10 @@ import ij.IJ;
 import ij.ImageJ;
 import ij.ImagePlus;
 import ij.Prefs;
-
 import ij.gui.Overlay;
 import ij.gui.Roi;
 import ij.gui.TextRoi;
 import ij.gui.Toolbar;
-
 import ij.util.Java2;
 import ij.util.Tools;
 

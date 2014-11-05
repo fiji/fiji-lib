@@ -1,49 +1,37 @@
 package fiji.tool;
 
-import fiji.tool.AbstractTool;
-import fiji.tool.SliceListener;
-
 import fiji.util.gui.GenericDialogPlus;
-
 import ij.IJ;
 import ij.ImagePlus;
 import ij.WindowManager;
-
 import ij.gui.ImageCanvas;
 import ij.gui.ImageWindow;
 import ij.gui.PolygonRoi;
 import ij.gui.Roi;
-
 import ij.io.OpenDialog;
 import ij.io.RoiDecoder;
 import ij.io.RoiEncoder;
 import ij.io.SaveDialog;
-
 import ij.plugin.frame.RoiManager;
-
 import ij.process.ImageProcessor;
 
 import java.awt.Cursor;
 import java.awt.List;
 import java.awt.Rectangle;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
-
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;

@@ -4,19 +4,15 @@ import ij.plugin.PlugIn;
 
 import java.awt.Dimension;
 import java.awt.Frame;
-
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTree;
-
-import javax.swing.event.TreeWillExpandListener;
 import javax.swing.event.TreeExpansionEvent;
-
+import javax.swing.event.TreeWillExpandListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 public class Object_Inspector implements PlugIn, TreeWillExpandListener {

@@ -3,7 +3,6 @@ package fiji.util;
 import ij.IJ;
 import ij.ImageJ;
 import ij.Menus;
-
 import ij.plugin.PlugIn;
 
 import java.awt.Component;
@@ -11,14 +10,11 @@ import java.awt.Cursor;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
-
 import java.net.URL;
-
 import java.util.Hashtable;
 
 /**
