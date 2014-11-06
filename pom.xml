@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>sc.fiji</groupId>
 		<artifactId>pom-fiji</artifactId>
-		<version>5.0</version>
+		<version>5.0.2</version>
 		<relativePath />
 	</parent>
 
@@ -35,6 +35,7 @@
 	</repositories>
 
 	<dependencies>
+		<!-- ImageJ dependencies -->
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
