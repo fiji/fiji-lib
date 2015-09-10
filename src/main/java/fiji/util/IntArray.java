@@ -1,5 +1,10 @@
 package fiji.util;
 
+/**
+ * @deprecated Use {@code org.scijava.util.IntArray} in
+ *             {@code org.scijava:scijava-common}.
+ */
+@Deprecated
 public class IntArray extends ArrayBase<int[], Integer> {
 	protected int[] baseArray;
 

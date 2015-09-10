@@ -1,5 +1,10 @@
 package fiji.util;
 
+/**
+ * @deprecated Use {@code org.scijava.util.DoubleArray} in
+ *             {@code org.scijava:scijava-common}.
+ */
+@Deprecated
 public class DoubleArray extends ArrayBase<double[], Double>
 {
 	protected double[] baseArray;

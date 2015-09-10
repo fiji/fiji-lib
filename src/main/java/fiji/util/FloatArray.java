@@ -1,5 +1,10 @@
 package fiji.util;
 
+/**
+ * @deprecated Use {@code org.scijava.util.FloatArray} in
+ *             {@code org.scijava:scijava-common}.
+ */
+@Deprecated
 public class FloatArray extends ArrayBase<float[], Float>
 {
 	protected float[] baseArray;
