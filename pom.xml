@@ -106,8 +106,8 @@
 		<url>https://github.com/fiji/fiji-lib/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/job/fiji-lib/</url>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/fiji/fiji-lib</url>
 	</ciManagement>
 
 	<properties>
