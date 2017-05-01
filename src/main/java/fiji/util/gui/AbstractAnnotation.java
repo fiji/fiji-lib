@@ -43,7 +43,7 @@ import java.awt.geom.AffineTransform;
  * 
  * @see OverlayedImageCanvas
  * @see Overlay
- * @author Jean-Yves Tinevez <jeanyves.tinevez@gmail.com> - Sep 2010
+ * @author Jean-Yves Tinevez - Sep 2010
  *
  */
 public abstract class AbstractAnnotation implements Overlay {

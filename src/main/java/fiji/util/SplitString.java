@@ -89,18 +89,23 @@ public class SplitString {
 
 	/**
 	 * Split a macro-type option string into single parts, respecting brackets.
-	 *
+	 * <p>
 	 * Example:
-	 *
+	 * </p>
+	 * <pre>
 	 *   path=[C:\Documents and Settings\ImageJ\Desktop\My Beautiful Image.jpg] radius=5
-	 *
+	 * </pre>
+	 * <p>
 	 * would be split into the two parts
-	 *
-	 *   path -> C:\Documents and Settings\ImageJ\Desktop\My Beautiful Image.jpg
-	 *   radius -> 5
-	 *
+	 * </p>
+	 * <pre>
+	 *   path -&gt; C:\Documents and Settings\ImageJ\Desktop\My Beautiful Image.jpg
+	 *   radius -&gt; 5
+	 * </pre>
+	 * <p>
 	 * In other words, it splits by white space, however it keeps arguments intact that
 	 * are enclosed in brackets.
+	 * </p>
 	 */
 	public static Map<String, String> splitMacroOptions(String options) throws ParseException {
 		Map<String, String> result = new HashMap<String, String>();
