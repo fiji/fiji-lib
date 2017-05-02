@@ -11,7 +11,7 @@
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>fiji-lib</artifactId>
-	<version>2.1.2-SNAPSHOT</version>
+	<version>2.1.2</version>
 
 	<name>jars/fiji-lib.jar</name>
 	<description>Utility classes for Fiji-based projects.</description>
@@ -98,7 +98,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/fiji/fiji-lib</connection>
 		<developerConnection>scm:git:git@github.com:fiji/fiji-lib</developerConnection>
-		<tag>HEAD</tag>
+		<tag>fiji-lib-2.1.2</tag>
 		<url>https://github.com/fiji/fiji-lib</url>
 	</scm>
 	<issueManagement>
