@@ -13,18 +13,18 @@
 	<artifactId>fiji-lib</artifactId>
 	<version>2.1.3-SNAPSHOT</version>
 
-	<name>jars/fiji-lib.jar</name>
+	<name>Fiji-Lib</name>
 	<description>Utility classes for Fiji-based projects.</description>
-	<url>https://imagej.net/Fiji-lib</url>
+	<url>https://github.com/fiji/fiji-lib</url>
 	<inceptionYear>2009</inceptionYear>
 	<organization>
 		<name>Fiji</name>
-		<url>http://fiji.sc/</url>
+		<url>https://fiji.sc/</url>
 	</organization>
 	<licenses>
 		<license>
 			<name>GNU General Public License v3+</name>
-			<url>http://www.gnu.org/licenses/gpl.html</url>
+			<url>https://www.gnu.org/licenses/gpl-3.0.html</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -33,7 +33,7 @@
 		<developer>
 			<id>ctrueden</id>
 			<name>Curtis Rueden</name>
-			<url>https://imagej.net/User:Rueden</url>
+			<url>https://imagej.net/people/ctrueden</url>
 			<roles>
 				<role>maintainer</role>
 			</roles>
@@ -42,48 +42,48 @@
 	<contributors>
 		<contributor>
 			<name>Johannes Schindelin</name>
-			<url>https://imagej.net/User:Schindelin</url>
+			<url>https://imagej.net/people/dscho</url>
 			<roles><role>founder</role></roles>
 			<properties><id>dscho</id></properties>
 		</contributor>
 		<contributor>
 			<name>Ignacio Arganda-Carreras</name>
-			<url>https://imagej.net/User:Iarganda</url>
+			<url>https://imagej.net/people/iarganda</url>
 			<properties><id>iarganda</id></properties>
 		</contributor>
 		<contributor>
 			<name>Stefan Helfrich</name>
-			<url>https://imagej.net/User:Stelfrich</url>
+			<url>https://imagej.net/people/stelfrich</url>
 			<properties><id>stelfrich</id></properties>
 		</contributor>
 		<contributor>
 			<name>Mark Hiner</name>
-			<url>https://imagej.net/User:Hinerm</url>
+			<url>https://imagej.net/people/hinerm</url>
 			<properties><id>hinerm</id></properties>
 		</contributor>
 		<contributor>
 			<name>Mark Longair</name>
-			<url>https://imagej.net/User:Mark</url>
+			<url>https://imagej.net/people/mhl</url>
 			<properties><id>mhl</id></properties>
 		</contributor>
 		<contributor>
 			<name>Tobias Pietzsch</name>
-			<url>https://imagej.net/User:Pietzsch</url>
+			<url>https://imagej.net/people/tpietzsch</url>
 			<properties><id>tpietzsch</id></properties>
 		</contributor>
 		<contributor>
 			<name>Stephan Preibisch</name>
-			<url>https://imagej.net/User:StephanP</url>
+			<url>https://imagej.net/people/StephanPreibisch</url>
 			<properties><id>StephanPreibisch</id></properties>
 		</contributor>
 		<contributor>
 			<name>Jean-Yves Tinevez</name>
-			<url>https://imagej.net/User:JeanYvesTinevez</url>
+			<url>https://imagej.net/people/tinevez</url>
 			<properties><id>tinevez</id></properties>
 		</contributor>
 		<contributor>
 			<name>Pavel Tomancak</name>
-			<url>https://imagej.net/User:Tomancak</url>
+			<url>https://imagej.net/people/tomancak</url>
 			<properties><id>tomancak</id></properties>
 		</contributor>
 	</contributors>
@@ -91,7 +91,7 @@
 	<mailingLists>
 		<mailingList>
 			<name>Image.sc Forum</name>
-			<archive>https://forum.image.sc/tags/fiji</archive>
+			<archive>https://forum.image.sc/tag/fiji</archive>
 		</mailingList>
 	</mailingLists>
 
